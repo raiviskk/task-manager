@@ -47,9 +47,9 @@ Run the built-in PHP server:
 3. View details of a specific task
 4. Delete a task
 
-![Screenshot](https://github.com/raiviskk/task-manager/blob/main/Screenshot%201.png)
-![Screenshot](https://github.com/raiviskk/task-manager/blob/main/Screenshot%202.png)
-![Screenshot](https://github.com/raiviskk/task-manager/blob/main/Screenshot%203.png)
+![Screenshot](https://github.com/raiviskk/task-manager/blob/main/demo/Screenshot%201.png)
+![Screenshot](https://github.com/raiviskk/task-manager/blob/main/demo/Screenshot%202.png)
+![Screenshot](https://github.com/raiviskk/task-manager/blob/main/demo/Screenshot%203.png)
   
    
    
