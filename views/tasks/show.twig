@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ task.name }}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #343a40;
+            margin-bottom: 20px; /* Increased margin for more space */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 500px;
+            margin-bottom: 20px; /* Increased margin for more space */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        small {
+            color: #999;
+            display: block;
+            margin-bottom: 20px; /* Increased margin for more space */
+        }
+
+        button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/">Back</a>
+    <h3>{{ task.name }}</h3>
+    <p>{{ task.description }}</p>
+
+    <small>
+        {{ task.createdAt.format('Y-m-d H:i:s') }}
+    </small>
+
+    <form method="post" action="/tasks/{{ task.id }}/delete" style="display: inline;">
+        <button type="submit" onclick="return confirm('Are you sure you want to delete this task?')">Delete</button>
+    </form>
+</div>
+</body>
+</html>
